@@ -9,11 +9,14 @@
 
 /*
 
- Bootstrap Import
-
+Imports
+- Terminal
+- Flexbox Grid
 */
 
-@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import "../../node_modules/terminal.css/dist/terminal.min";
+@import "../../node_modules/flexboxgrid/dist/flexboxgrid.min";
 
 /*
 
@@ -21,12 +24,11 @@
 
 */
 
-
 @import "modules/mixins";
 @import "modules/variables";
-
-@import "modules/base";
-@import "modules/typography";
+// @import "modules/base";
+// @import "modules/typography";
+@import "modules/root";
 //@import "modules/wp-default";
 //@import "modules/themes";
 
@@ -44,10 +46,10 @@
 
 */
 
-@import "components/backtotop";
-@import "components/comments";
-@import "components/homepage";
-@import "components/sidebar";
+// @import "components/backtotop";
+// @import "components/comments";
+// @import "components/homepage";
+// @import "components/sidebar";
 
 /*
 
@@ -55,9 +57,9 @@
 
 */
 
-@import "sections/header";
+// @import "sections/header";
 @import "sections/main";
-@import "sections/footer";
+// @import "sections/footer";
 
 
 /*
