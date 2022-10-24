@@ -1,6 +1,6 @@
 	<?php
-		$protocol = array('https://');
-		$domain = str_replace($protocol, '', get_bloginfo('wpurl'));
+		$protocols = array('https://');
+		$domain =  str_replace($protocols, '', get_bloginfo('wpurl'));
 	?>
 
 
@@ -16,3 +16,5 @@
 <?php
 	get_template_part('inc/integrations','load');
 ?>
+</body>
+</html>
