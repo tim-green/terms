@@ -1,45 +1,21 @@
 <?php get_header(); ?>
+<section class="container">
+	<div class="row">
+		<div class="col-lg-12">
 
-<main id="content-wrapper">
+		<h1 class="text-center">
+			<?php the_title(); ?>
+		</h1>
 
-	<?php
-	while ( have_posts() ) :
-		the_post();
-		?>
-	
-	<div class="container">
+		<p>
+			Created on <span><?php the_time('F j, Y'); ?></span> at <span><?php the_time('g:i a');?></span></p>
+		<p>
+			Category: <span><?php the_category(', '); ?></span>
+		</p>
 
-		<?php grnd_breadcrumbs(); ?>
-
-		<div class="row py-5">
-
-			<div id="article-wrapper" class="col">       
-
-				<?php get_template_part( 'templates/content/single', '' ); ?>
-
-				<nav class="nav">
-					<?php
-					previous_post_link( '<span class="nav-link me-auto">&laquo; %link</span>' );
-						next_post_link( '<span class="nav-link ms-auto">%link &raquo;</span>' );
-					?>
-				</nav>
-					
-				<?php
-				if ( comments_open() || get_comments_number() ) {
-					comments_template(); }
-				?>
-			
-			</div> <!-- #article-wrapper -->
-
-			<?php get_sidebar(); ?>
+		<?php the_content(); ?>
 
 		</div>
-
 	</div>
-  
-	<?php endwhile ?>
-
-</main> <!-- #content-wrapper -->
-
-<?php
-get_footer();
+</section>
+<?php get_footer();
