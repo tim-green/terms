@@ -24,6 +24,9 @@ if ( ! function_exists( 'grnd_styles_scripts' ) ) {
 		//Bootstrap from JSdelivr CDN
 		wp_enqueue_script( 'bootstrap',  '//cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', false, $theme_version, true );
 
+		//HighlightJS from JSdelivr CDN
+		wp_enqueue_script( 'highlight',  '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js', false, $theme_version, true );
+
 		wp_enqueue_script( 'grnd-scripts', get_template_directory_uri() . '/assets/build/app.min.js', false, $theme_version, true );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
