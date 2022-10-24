@@ -5,10 +5,100 @@
 
 */
 
-.main{
-  padding: 0 30px;
+
+.text-center {
+  text-align: center;
 }
 
-.main-success{
-  color: $white;
+.terminal{
+  border-radius: 3px;
+  color: var(--text-color);
+  display: block;
+  font-family: $font-stack;
+  font-size: 1em;
+  font-smooth: antialiased;
+  line-height: $base-line-height;
+  padding: 1em;
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+
+  code{
+    display: block;
+  }
+}
+
+.editor{
+  counter-reset: line;
+
+  code:before{
+    color: var(--prompt);
+    content: counter(line);
+    counter-increment: line;
+    margin-right: .5em;
+  }
+}
+
+[data-term-replay]{
+  bottom: 0px;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.5em;
+  padding: 1em 2em;
+  position: absolute;
+  right: 0px;
+
+  &:hover{
+    color: var(--text);
+  }
+}
+
+.shell [data-term-input]:before {
+  color: var(--prompt);
+  content: '$';
+  margin-right: 0.5em;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+[data-term-cursor]:after {
+  content: '_';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%{opacity: 0;}
+  50%{opacity: .9;}
+  100%{opacity: 1;}
+}
+
+hr {
+margin-top: 10px;
+  margin-bottom: 5px;
+}
+span.heart {
+  color:$green;
+  font-size: 1.5em;
+}
+
+img{
+  width: auto !important;
+  content: "";
+  clear: both;
+  display: table;
+  max-width: -webkit-fill-available;
+}
+
+div.pagination > a{
+  color: var(--text);
+}
+
+ol{
+  list-style: none !important;
+
+  .terminal-toc li a{
+    background: none !important;
+  }
 }
