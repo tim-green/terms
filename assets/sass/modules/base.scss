@@ -21,7 +21,7 @@ html {
 
 // Selected text styles
 ::selection {
-  color: $light;
+  // color: $light;
   background-color: tint-color($secondary, 15%);
 }
 
