@@ -19,10 +19,10 @@ if ( ! function_exists( 'grnd_styles_scripts' ) ) {
 		wp_enqueue_script( 'jquery', '//cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js', false, $theme_version, true );
 
 		//FontAwesome - Free Version
-		wp_enqueue_script( 'font-awesome', '//kit.fontawesome.com/f8466e44e0.js', false, $theme_version, true );
+		// wp_enqueue_script( 'font-awesome', '//kit.fontawesome.com/f8466e44e0.js', false, $theme_version, true );
 
 		//Bootstrap from JSdelivr CDN
-		wp_enqueue_script( 'bootstrap',  '//cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', false, $theme_version, true );
+		// wp_enqueue_script( 'bootstrap',  '//cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', false, $theme_version, true );
 
 		//HighlightJS from JSdelivr CDN
 		wp_enqueue_script( 'highlight',  '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js', false, $theme_version, true );
