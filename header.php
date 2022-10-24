@@ -11,16 +11,25 @@
 
 <body <?php body_class(); ?>> 
 <?php wp_body_open(); ?>
+<main id="page">
+	<header class="containter">
+		<div class="row">
+			<div class="logo terminal-prompt col-lg-6 col-md-6 col-xs-12">
+				<a href="<?php home_url(); ?>" class="no-style">
+					<?php bloginfo('name');?>
+				</a>
+				<small>
+					<?php bloginfo('description');?>
+				</small>
+			</div>
 
-<div id="site-wrapper" class="d-flex flex-column min-vh-100">
-
-	<header id="header-wrapper" class="sticky-top bg-dark">
-
-		<?php
-			// get_template_part('templates/header/header', 'topbar');
-			get_template_part( 'templates/header/header', 'simple' );
-		?>
-
-	</header> <!-- #header-wrapper -->
-
-	<div id="page-wrapper" class="flex-grow-1">
+			<nav class="terminal-menu col-lg-6 col-md-6 col-xs-12">
+				<?php wp_nav_menu(
+					array(
+						'theme_location' => 'main', 'container' => false,
+						)
+				); ?>
+			</nav>
+		</div>
+	</header>
+</main>
